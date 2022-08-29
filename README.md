@@ -4,10 +4,12 @@ I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and
 - put it together in the correct order
 - clarified a bit the format of the curl url to upload data to traccar
 - added the serial number of the Airtag to the data sent to traccar
-- moved the "sleep 60" outside of the for cycle between airtags, otherwise the script would have processed 1 airtag per minute
-- added a "sleep 1" instead of 60 not to overload traccar server if you have many Airtags
+- added a "sleep 1" after every call to traccar not to overload the server if you have many Airtags
 
-Nb: your AirTag name will be your device ID so you'll have to choose if you want something readable, like "Backpack", or something a bit more randomic and less readable
+NB: your AirTag name will be your device ID so you'll have to choose if you want something readable, like "Backpack", or something a bit more randomic and less readable
+
+NB2: Apple has changed how airtags report battery: https://www.macrumors.com/2022/07/21/apple-removes-airtag-battery-level-icon-find-my/
+and I think the script is not suited to manage this change, I did not have time to look into it.
 
 ### Requirements:
 
