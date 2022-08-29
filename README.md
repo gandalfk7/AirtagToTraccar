@@ -1,6 +1,6 @@
 # AirtagToTraccar
 
-I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and 
+I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and:
 - put it together in the correct order
 - clarified a bit the format of the curl url to upload data to traccar
 - added the serial number of the Airtag to the data sent to traccar
