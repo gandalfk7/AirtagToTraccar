@@ -24,6 +24,8 @@ and I think the script is not suited to manage this change, I did not have time 
 
 
 ___
+___
+___
 
 # Original instructions from: https://github.com/icepick3000/AirtagAlex
 
