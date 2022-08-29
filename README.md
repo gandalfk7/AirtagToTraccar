@@ -1,8 +1,11 @@
 # AirtagToTraccar
 
-I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and pu it together in the correct order and clarified a bit the format of the curl url to upload data to traccar.
-
-I've also added the serial number of the Airtag to the data sent to traccar.
+I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and 
+- put it together in the correct order
+- clarified a bit the format of the curl url to upload data to traccar
+- added the serial number of the Airtag to the data sent to traccar
+- moved the "sleep 60" outside of the for cycle between airtags, otherwise the script would have processed 1 airtag per minute
+- added a "sleep 1" instead of 60 not to overload traccar server if you have many Airtags
 
 Nb: your AirTag name will be your device ID so you'll have to choose if you want something readable, like "Backpack", or something a bit more randomic and less readable
 
