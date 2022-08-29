@@ -71,14 +71,17 @@ do
 
 	echo $datetime,$serialnumber,$producttype,$productindentifier,$vendoridentifier,$antennapower,$systemversion,$batterystatus,$locationpositiontype,$locationlatitude,$locationlongitude,$locationtimestamp,$locationverticalaccuracy,$locationhorizontalaccuracy,$locationfloorlevel,$locationaltitude,$locationisinaccurate,$locationisold,$locationfinished,$addresslabel,$addressstreetaddress,$addresscountrycode,$addressstatecode,$addressadministrativearea,$addressstreetname,$addresslocality,$addresscountry,$addressareaofinteresta,$addressareaofinterestb,$batterystatus >> ~/Desktop/Airtags/Airtags.csv
 
-  ### Traccar:
-  # get data for traccar:
-  serialnumber=`echo $serialnumber | sed 's/\"//g'`
-  tracname=`cat ~/Desktop/Airtags/Items.data | jq .[$j].name | sed 's!"!!g'` 
-  batterystatus=`cat ~/Desktop/Airtags/Items.data | jq .[$j].batteryStatus`
-  akku=$((batterystatus * 100))
-  # send data to traccar:
-  wget --spider -q  http://youraddress.net:5055/?id=$tracname\&lat=$locationlatitude\&lon=$locationlongitude\&speed=0\&user=Airtag\&batteryLevel=$akku\&accuracy=$locationhorizontalaccuracy\&timestamp=$locationtimestamp
+  	### Traccar:
+  	# get data for traccar:
+  	serialnumber=`echo $serialnumber | sed 's/\"//g'`
+  	tracname=`cat ~/Desktop/Airtags/Items.data | jq .[$j].name | sed 's!"!!g'` 
+  	batterystatus=`cat ~/Desktop/Airtags/Items.data | jq .[$j].batteryStatus`
+  	akku=$((batterystatus * 100))
+ 	# send data to traccar:
+  	wget --spider -q  http://youraddress.net:5055/?id=$tracname\&lat=$locationlatitude\&lon=$locationlongitude\&speed=0\&user=Airtag\&batteryLevel=$akku\&accuracy=$locationhorizontalaccuracy\&timestamp=$locationtimestamp
+
+	echo "Sleep for 1 second"
+	sleep 1
 
 	done
 	echo "Sleep for 1 minute (60 seconds)"
