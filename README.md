@@ -14,10 +14,13 @@ and I think the script is not suited to manage this change, I did not have time 
 - Airtags take time to update, so it's not immediate that a seen Airtag is sent to "Find My", or that they update as often as we wish to.
 
 ### Requirements:
-
 - You'll need to have a mac with at least BigSur (MacOsX 11) installed
 - The mac will need to be always-running
 - You'll need to open the app "Find My" at least once (will check if it needs to be always opened&running or not
+
+### Other repos/resources for future improvements:
+- https://github.com/jcostom/flightrecorder/blob/39884153b1f3f7fd2be09f573800ac4866d1d22c/flightrecorder.py
+
 
 ___
 
