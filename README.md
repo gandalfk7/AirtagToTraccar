@@ -2,7 +2,17 @@
 
 I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and pu it together in the correct order and clarified a bit the format of the curl url to upload data to traccar.
 
+I've also added the serial number of the Airtag to the data sent to traccar.
 
+Nb: your AirTag name will be your device ID so you'll have to choose if you want something readable, like "Backpack", or something a bit more randomic and less readable
+
+### Requirements:
+
+- You'll need to have a mac with at least BigSur (MacOsX 11) installed
+- The mac will need to be always-running
+- You'll need to open the app "Find My" at least once (will check if it needs to be always opened&running or not
+
+___
 
 # Original instructions from: https://github.com/icepick3000/AirtagAlex
 
