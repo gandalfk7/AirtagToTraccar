@@ -78,7 +78,7 @@ do
   	batterystatus=`cat ~/Desktop/Airtags/Items.data | jq .[$j].batteryStatus`
   	akku=$((batterystatus * 100))
  	# send data to traccar:
-  	wget --spider -q  http://youraddress.net:5055/?id=$tracname\&lat=$locationlatitude\&lon=$locationlongitude\&speed=0\&user=Airtag\&batteryLevel=$akku\&accuracy=$locationhorizontalaccuracy\&timestamp=$locationtimestamp
+  	wget --spider -q  http://youraddress.net:5055/?id=$tracname\&lat=$locationlatitude\&lon=$locationlongitude\&speed=0\&user=Airtag\&batteryLevel=$akku\&accuracy=$locationhorizontalaccuracy\&timestamp=$locationtimestamp\&serialnumber=$serialnumber
 
 	echo "Sleep for 1 second"
 	sleep 1
