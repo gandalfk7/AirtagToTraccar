@@ -6,7 +6,7 @@ I've taken the code from icepick3000/AirtagAlex and SchorschKloni/AirtagAlex and
 - added the serial number of the Airtag to the data sent to traccar
 - added a "sleep 1" after every call to traccar not to overload the server if you have many Airtags
 
-NB: 
+### NB: 
 - your AirTag name will be your device ID so you'll have to choose if you want something readable, like "Backpack", or something a bit more randomic and less readable
 - Apple has changed how airtags report battery: https://www.macrumors.com/2022/07/21/apple-removes-airtag-battery-level-icon-find-my/
 and I think the script is not suited to manage this change, I did not have time to look into it.
