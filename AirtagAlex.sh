@@ -73,6 +73,7 @@ do
 
   ### Traccar:
   # get data for traccar:
+  serialnumber=`echo $serialnumber | sed 's/\"//g'`
   tracname=`cat ~/Desktop/Airtags/Items.data | jq .[$j].name | sed 's!"!!g'` 
   batterystatus=`cat ~/Desktop/Airtags/Items.data | jq .[$j].batteryStatus`
   akku=$((batterystatus * 100))
